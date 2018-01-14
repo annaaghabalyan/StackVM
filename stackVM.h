@@ -14,4 +14,9 @@ typedef struct {
     int fp;         // frame pointer (for local scope)
 } VM;
 
+
+VM* newVM(int* code, int pc, int datasize);
+
+void delVM(VM* vm);
+
 #endif

@@ -17,7 +17,7 @@ enum {
     GSTORE = 13,    // store in global memory
     PRINT = 14,     // print value on top of the stack
     POP = 15,       // throw away top of the stack
-    HALT = 16,      // stop program
+    END = 16,      // stop program
     CALL = 17,      // call procedure
     RET = 18        // return from procedure
 };

@@ -8,12 +8,13 @@
 
 void run(VM* vm) {  
     do {
+
         int opcode = NCODE(vm);        // fetch
         int v, addr, offset, a, b, argc, rval;
 
         switch (opcode) {   // decode
 
-        case HALT: return;  // stop the program
+        case END: return;  // stop the program
 
         case CONST_I32:
             v = NCODE(vm);   // get next value from code
@@ -120,7 +121,9 @@ void run(VM* vm) {
             v = POP(vm);
             printf("%d\n", v);
             break;
+
         default:
+            //printf("ERROR: No command %d", opcode); 
             break;
         }
 

@@ -15,7 +15,7 @@ VM* newVM(int* code,    // pointer to table containing a bytecode to be executed
     return vm;
 }
 
-void delVM(VM* vm){
+void delVM(VM* vm) {
     free(vm->locals);
     free(vm->stack);
     free(vm);
