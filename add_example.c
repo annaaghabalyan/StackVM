@@ -10,17 +10,17 @@ int main()
 
    int program[] = {  
 
-     CONST_I32, 1,
-     CONST_I32, 2,
-     ADD_I32, 
-     PRINT,
-     END
+     CONST_I32, 1, // 0
+     CONST_I32, 2, // 2
+     ADD_I32,      // 4
+     PRINT,        // 5 
+     END           // 6
 
    };
 
    VM* vm = newVM(program,
                    0,    // start address of main function
-                   2);    // locals to be reserved, fib doesn't require them
+                   2);   // locals
    run(vm); 
 
    return 0;
